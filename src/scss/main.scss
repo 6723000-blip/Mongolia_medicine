@@ -1,0 +1,1032 @@
+
+@use "../../node_modules/bulma/bulma";
+
+$primary: #236b4b;
+$gold: #c59b55;
+
+body {
+  background: #f8f7f2;
+  color: #26372d;
+  min-height: 100vh;
+}
+
+.navbar {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e9e4;
+}
+
+.navbar-item strong {
+  color: $primary;
+  font-size: 24px;
+}
+
+.hero-medicine {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #e4f1e8,
+    #ffffff
+  );
+}
+
+.hero-medicine h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: $primary;
+  margin-bottom: 20px;
+}
+
+.hero-medicine p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+
+.medicine-button {
+  display: inline-block;
+  background: $primary;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.medicine-button:hover {
+  background: #174c35;
+  color: white;
+}
+
+
+.treatment-card {
+  height: 100%;
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid #e5ebe5;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(25, 70, 45, 0.12);
+}
+
+.treatment-card .title {
+  color: #236b4b;
+}
+
+.treatment-card p {
+  line-height: 1.8;
+  color: #526257;
+}
+
+
+/* Navbar дизайн */
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand .navbar-item strong {
+  color: #236b4b;
+  font-size: 24px;
+}
+
+.navbar-menu .navbar-item {
+  color: #344b3b;
+  font-weight: 600;
+  padding: 16px;
+  transition: 0.2s ease;
+}
+
+.navbar-menu .navbar-item:hover {
+  color: #236b4b;
+  background-color: #edf5ef;
+}
+
+.navbar-burger {
+  color: #236b4b;
+}
+
+
+/* Эмийн ургамлын карт */
+
+.herb-card {
+  height: 100%;
+  border-radius: 14px;
+  border: 1px solid #e5ebe5;
+  padding: 26px;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.herb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(25, 70, 45, 0.12);
+}
+
+.herb-card .title {
+  color: #236b4b;
+}
+
+.herb-card p {
+  line-height: 1.7;
+}
+
+#herb-search:focus {
+  border-color: #236b4b;
+  box-shadow: 0 0 0 2px rgba(35, 107, 75, 0.12);
+}
+
+
+/* Ном, судалгааны карт */
+
+.book-card {
+  height: 100%;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #e5ebe5;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(25, 70, 45, 0.12);
+}
+
+.book-card .title {
+  color: #236b4b;
+}
+
+.book-card p {
+  color: #526257;
+  line-height: 1.8;
+}
+
+#book-search:focus {
+  border-color: #236b4b;
+  box-shadow: 0 0 0 2px rgba(35, 107, 75, 0.12);
+}
+
+
+/* Холбоо барих хуудас */
+
+.contact-section {
+  background-color: #fafbf8;
+  min-height: 75vh;
+}
+
+.contact-info {
+  height: 100%;
+  background: #edf5ef;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.contact-info .title {
+  color: #236b4b;
+}
+
+.contact-info p {
+  color: #526257;
+  line-height: 1.8;
+}
+
+.contact-form-box {
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e5ebe5;
+}
+
+.contact-form-box .title {
+  color: #236b4b;
+}
+
+.contact-form-box .input:focus,
+.contact-form-box .textarea:focus {
+  border-color: #236b4b;
+  box-shadow: 0 0 0 2px rgba(35, 107, 75, 0.12);
+}
+
+.contact-form-box .button.is-success {
+  background-color: #236b4b;
+  border-color: #236b4b;
+  font-weight: 600;
+}
+
+.contact-form-box .button.is-success:hover {
+  background-color: #195238;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-info,
+  .contact-form-box {
+    padding: 20px;
+  }
+}
+
+
+/* ===================================
+   MODERN NAVBAR
+=================================== */
+
+.modern-navbar {
+  background: #ffffff;
+  min-height: 84px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.modern-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modern-navbar .navbar-brand {
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e8f3eb;
+  border-radius: 12px;
+  font-size: 26px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.brand-text strong {
+  color: #236b4b;
+  font-size: 23px;
+}
+
+.brand-text small {
+  color: #738478;
+  font-size: 11px;
+}
+
+.modern-navbar .navbar-menu {
+  box-shadow: none;
+}
+
+.modern-navbar .navbar-end {
+  align-items: center;
+  gap: 5px;
+}
+
+.modern-navbar .navbar-item {
+  color: #425b4b;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 9px;
+  transition: all 0.25s ease;
+}
+
+.modern-navbar .navbar-menu .navbar-item:hover,
+.modern-navbar .navbar-menu .navbar-item.is-active {
+  background: #e8f3eb;
+  color: #236b4b;
+}
+
+.modern-navbar .contact-nav-btn {
+  background: #236b4b;
+  color: white;
+  margin-left: 12px;
+  padding: 12px 18px;
+}
+
+.modern-navbar .navbar-menu .contact-nav-btn:hover,
+.modern-navbar .navbar-menu .contact-nav-btn.is-active {
+  background: #195238;
+  color: white;
+}
+
+/* Гар утасны Navbar */
+
+@media screen and (max-width: 1023px) {
+  .modern-navbar .container {
+    display: block;
+  }
+
+  .modern-navbar .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modern-navbar .navbar-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .modern-navbar .navbar-menu {
+    display: none;
+    padding: 14px;
+    background: white;
+    border-top: 1px solid #e5ebe5;
+  }
+
+  .modern-navbar .navbar-menu.is-active {
+    display: block;
+  }
+
+  .modern-navbar .navbar-end {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modern-navbar .navbar-item {
+    padding: 14px;
+  }
+
+  .modern-navbar .contact-nav-btn {
+    margin: 10px 0 0;
+    text-align: center;
+  }
+}
+
+
+/* =====================================
+   DETAIL PAGES - МӨНХ ӨВ
+===================================== */
+
+.detail-hero {
+  background: linear-gradient(120deg, #e8f3eb, #f8faf6);
+  padding: 85px 24px;
+}
+
+.detail-hero .title {
+  color: #173f31;
+  margin-top: 18px;
+}
+
+.detail-hero p {
+  color: #526257;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.detail-label {
+  color: #36835d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.detail-hero-image {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.detail-centered-text {
+  max-width: 760px;
+  margin: 20px auto;
+  line-height: 1.9;
+  color: #526257;
+}
+
+.detail-soft-section {
+  background: #edf5ef;
+  padding: 75px 24px;
+}
+
+/* Түүхэн үе шат */
+
+.history-timeline {
+  max-width: 850px;
+  margin: 0 auto;
+  border-left: 3px solid #8cbea1;
+  padding-left: 30px;
+}
+
+.history-event {
+  position: relative;
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  border: 1px solid #e5ebe5;
+  box-shadow: 0 8px 24px rgba(20, 60, 40, 0.05);
+}
+
+.history-event::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #236b4b;
+}
+
+.history-period {
+  color: #36835d;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.history-event .title {
+  color: #236b4b;
+  margin-top: 10px;
+}
+
+.history-event p {
+  color: #526257;
+  line-height: 1.8;
+}
+
+/* Эмчилгээ болон ургамлын карт */
+
+.detail-card {
+  height: 100%;
+  background: white;
+  border: 1px solid #e5ebe5;
+  border-radius: 18px;
+  padding: 28px;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(20, 60, 40, 0.10);
+}
+
+.detail-card-icon {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.detail-card .title {
+  color: #236b4b;
+}
+
+.detail-card p {
+  color: #526257;
+  line-height: 1.8;
+}
+
+.detail-card-subtitle {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+/* Ургамлын карт */
+
+.herb-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.herb-card img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.herb-card-body {
+  padding: 24px;
+}
+
+.herb-latin {
+  font-size: 14px;
+  color: #718176;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-hero {
+    padding: 55px 18px;
+  }
+
+  .detail-hero-image {
+    height: 270px;
+  }
+
+  .history-timeline {
+    padding-left: 20px;
+  }
+
+  .history-event::before {
+    left: -29px;
+  }
+
+  .detail-card {
+    padding: 22px;
+  }
+
+  .herb-card {
+    padding: 0;
+  }
+}
+
+
+/* ==========================================
+   МӨНХ ӨВ — АЛХАМ 9
+   MODERN UI & RESPONSIVE DESIGN
+========================================== */
+
+$forest: #214d3b;
+$green: #34785a;
+$light-green: #eaf3ec;
+$cream: #faf8f2;
+$text: #293b32;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $cream;
+  color: $text;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+button, a, input, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #80b89a;
+  outline-offset: 3px;
+}
+
+/* NAVBAR */
+
+.modern-navbar {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 25px rgba(25, 70, 45, 0.07);
+  border-bottom: 1px solid #e5eee6;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.modern-navbar .navbar-item {
+  transition: color 0.2s ease,
+              background 0.2s ease;
+}
+
+.modern-navbar a.navbar-item:hover {
+  color: $green;
+  background: $light-green;
+}
+
+.modern-navbar a.navbar-item.is-active {
+  color: $green;
+  font-weight: 700;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 30px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.brand-text strong {
+  color: $forest;
+  font-size: 20px;
+}
+
+.brand-text small {
+  color: #718579;
+  font-size: 11px;
+}
+
+/* HERO */
+
+.hero-medicine {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 24px;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(125, 183, 142, 0.23),
+      transparent 35%
+    ),
+    linear-gradient(125deg, #e6f1e8, #faf8f2);
+}
+
+.hero-medicine h1 {
+  font-size: clamp(44px, 7vw, 78px);
+  color: $forest;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.hero-medicine p {
+  max-width: 650px;
+  color: #4e6456;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.9;
+}
+
+.medicine-button,
+.button.is-success {
+  background: $green;
+  border-color: $green;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.medicine-button {
+  display: inline-flex;
+  padding: 14px 26px;
+  margin-top: 22px;
+  text-decoration: none;
+}
+
+.medicine-button:hover,
+.button.is-success:hover {
+  background: $forest;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(33, 77, 59, 0.2);
+}
+
+/* SECTION HEADINGS */
+
+.section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section .title {
+  letter-spacing: -0.5px;
+}
+
+.section .title.is-2 {
+  color: $forest;
+}
+
+/* CARDS */
+
+.detail-card,
+.book-card,
+.contact-info,
+.contact-form-box,
+.history-event {
+  border: 1px solid #e4ece5;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(30, 70, 45, 0.05);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.detail-card:hover,
+.book-card:hover,
+.history-event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(30, 70, 45, 0.12);
+}
+
+.herb-card {
+  overflow: hidden;
+}
+
+.herb-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.herb-card:hover img {
+  transform: scale(1.035);
+}
+
+/* FORM */
+
+.input,
+.textarea,
+.select select {
+  border-radius: 12px;
+  border-color: #dce7df;
+  box-shadow: none;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+  border-color: $green;
+  box-shadow: 0 0 0 3px rgba(52, 120, 90, 0.12);
+}
+
+/* LANGUAGE SWITCH */
+
+.language-switch {
+  gap: 5px;
+}
+
+.language-switch .button {
+  min-width: 62px;
+  border-radius: 9px !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ENTRANCE ANIMATION */
+
+@keyframes gentleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: gentleAppear 0.5s ease both;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 1023px) {
+  .modern-navbar .navbar-menu {
+    background: white;
+    padding: 12px;
+    box-shadow: 0 12px 25px rgba(20, 60, 40, 0.08);
+  }
+
+  .modern-navbar .navbar-end {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .language-switch {
+    justify-content: center;
+    padding: 8px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 42px 16px;
+  }
+
+  .hero-medicine {
+    min-height: 65vh;
+    padding: 65px 20px;
+  }
+
+  .detail-hero {
+    padding: 50px 18px;
+  }
+
+  .detail-hero .title.is-1 {
+    font-size: clamp(30px, 7vw, 42px);
+  }
+
+  .detail-hero-image {
+    height: 240px;
+  }
+
+  .detail-card,
+  .book-card {
+    margin-bottom: 15px;
+  }
+
+  .herb-card img {
+    height: 210px;
+  }
+
+  .contact-section .columns {
+    display: block;
+  }
+}
+
+/* ХӨДӨЛГӨӨН БАГАСГАХ ТОХИРГОО */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-enter {
+    animation: none;
+  }
+
+  .detail-card,
+  .book-card,
+  .history-event,
+  .herb-card img,
+  .medicine-button,
+  .button.is-success {
+    transition: none;
+  }
+}
+
+
+/* ========================================
+   МӨНХ ӨВ - ИНТЕРАКТИВ ГАЗРЫН ЗУРАГ
+======================================== */
+
+.plant-map-page {
+  background: #faf9f5;
+  min-height: 80vh;
+}
+
+.plant-map-eyebrow {
+  color: #2e8058;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.plant-map-title {
+  color: #243c30;
+  font-weight: 800;
+}
+
+.plant-map-card,
+.plant-map-info-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.plant-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.mongolia-map {
+  width: 100%;
+  height: 520px;
+  min-height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eaf2eb;
+  z-index: 1;
+}
+
+.plant-map-status {
+  color: #547061;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.province-information {
+  min-height: 200px;
+}
+
+.province-detail {
+  animation: provinceFade 0.35s ease;
+}
+
+@keyframes provinceFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .plant-map-card,
+  .plant-map-info-card {
+    padding: 15px;
+  }
+
+  .mongolia-map {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .plant-map-title {
+    font-size: 2rem !important;
+  }
+
+  .plant-map-header {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Эмийн ургамлын карт */
+
+.plant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.plant-detail-card {
+  background: #f8fbf8;
+  border: 1px solid #e2eee5;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(24, 83, 55, 0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.plant-detail-content {
+  padding: 18px;
+
+  h4 {
+    color: #205d3e;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  p {
+    line-height: 1.7;
+    font-size: 14px;
+  }
+}
+
+.plant-scientific {
+  color: #738a7c;
+  margin-bottom: 12px;
+}
+
+.plant-map-info-card {
+  max-height: 700px;
+  overflow-y: auto;
+}
